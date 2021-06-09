@@ -440,6 +440,29 @@
     }
   },
   "definitions": {
+    "crossTenantScopes": {
+      "properties": {
+        "tenantId": {
+          "type": "string",
+          "description": "Tenant ID."
+        },
+        "managementGroups": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "List of management groups."
+        },
+        "subscriptions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "List of subscriptions."
+        }
+      },
+      "description": "Cross tenant scopes."
+    },
     "NetworkManager": {
       "properties": {
         "properties": {
@@ -511,28 +534,9 @@
             "crossTenantScopes": {
               "type": "array",
               "items": {
-                "type": "object",
-                "properties": {
-                  "tenantId": {
-                    "type": "string",
-                    "description": "Tenant ID."
-                  },
-                  "managementGroups": {
-                    "type": "array",
-                    "items": {
-                      "type": "string"
-                    },
-                    "description": "List of management groups."
-                  },
-                  "subscriptions": {
-                    "type": "array",
-                    "items": {
-                      "type": "string"
-                    },
-                    "description": "List of subscriptions."
-                  }
-                }
-              }
+                "$ref": "#/definitions/crossTenantScopes"
+              },
+              "description": "List of cross tenant scopes."
             }
           },
           "description": "Scope of Network Manager."
