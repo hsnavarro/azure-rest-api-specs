@@ -440,7 +440,7 @@
     }
   },
   "definitions": {
-    "crossTenantScopes": {
+    "CrossTenantScopes": {
       "properties": {
         "tenantId": {
           "type": "string",
@@ -534,7 +534,7 @@
             "crossTenantScopes": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/crossTenantScopes"
+                "$ref": "#/definitions/CrossTenantScopes"
               },
               "description": "List of cross tenant scopes."
             }
