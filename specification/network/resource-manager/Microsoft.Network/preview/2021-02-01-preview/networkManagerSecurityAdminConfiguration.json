@@ -565,6 +565,11 @@
           "readOnly": true,
           "description": "The system metadata related to this resource.",
           "$ref": "./network.json#/definitions/SystemData"
+        },
+        "resourceGuid": {
+          "readOnly": true,
+          "type": "string",
+          "description": "The resourceGuid property of the Security Configuration resource."
         }
       },
       "allOf": [
@@ -675,6 +680,11 @@
           "readOnly": true,
           "description": "The system metadata related to this resource.",
           "$ref": "./network.json#/definitions/SystemData"
+        },
+        "resourceGuid": {
+          "readOnly": true,
+          "type": "string",
+          "description": "The resourceGuid property of the Rule Collection resource."
         }
       },
       "allOf": [
@@ -727,6 +737,11 @@
           "readOnly": true,
           "description": "The system metadata related to this resource.",
           "$ref": "./network.json#/definitions/SystemData"
+        },
+        "resourceGuid": {
+          "readOnly": true,
+          "type": "string",
+          "description": "The resourceGuid property of the Admin Rule resource."
         }
       },
       "allOf": [

@@ -228,6 +228,11 @@
           "readOnly": true,
           "description": "The system metadata related to this resource.",
           "$ref": "./network.json#/definitions/SystemData"
+        },
+        "resourceGuid": {
+          "readOnly": true,
+          "type": "string",
+          "description": "The resourceGuid property of the Connectivity Configuration resource."
         }
       },
       "allOf": [

@@ -479,6 +479,11 @@
           "readOnly": true,
           "description": "The system metadata related to this resource.",
           "$ref": "./network.json#/definitions/SystemData"
+        },
+        "resourceGuid": {
+          "readOnly": true,
+          "type": "string",
+          "description": "The resourceGuid property of the Network Manager resource."
         }
       },
       "allOf": [
@@ -582,6 +587,11 @@
           "type": "string",
           "$ref": "#/definitions/ConfigurationType",
           "description": "Commit Type."
+        },
+        "resourceGuid": {
+          "readOnly": true,
+          "type": "string",
+          "description": "The resourceGuid property of the Network Manager Commit resource."
         }
       },
       "description": "Network Manager Commit."
