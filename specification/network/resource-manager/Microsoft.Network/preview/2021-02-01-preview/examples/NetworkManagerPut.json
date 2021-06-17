@@ -15,6 +15,28 @@
           ],
           "subscriptions": [
             "/subscriptions/00000000-0000-0000-0000-000000000000"
+          ],
+          "crossTenantScopes": [
+            {
+              "tenantId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx1",
+              "managementGroups": [
+                "Microsoft.Management/managementGroups/testmg2",
+                "Microsoft.Management/managementGroups/testmg3"
+              ],
+              "subscriptions": [
+                "/subscriptions/00000000-0000-0000-0000-000000000001"
+              ]
+            },
+            {
+              "tenantId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx2",
+              "managementGroups": [
+                "Microsoft.Management/managementGroups/testmg4",
+                "Microsoft.Management/managementGroups/testmg5"
+              ],
+              "subscriptions": [
+                "/subscriptions/00000000-0000-0000-0000-000000000002"
+              ]
+            }
           ]
         },
         "networkManagerScopeAccesses": [
@@ -47,6 +69,28 @@
             ],
             "subscriptions": [
               "/subscriptions/00000000-0000-0000-0000-000000000000"
+            ],
+            "crossTenantScopes": [
+              {
+                "tenantId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx1",
+                "managementGroups": [
+                  "Microsoft.Management/managementGroups/testMg2",
+                  "Microsoft.Management/managementGroups/testMg3"
+                ],
+                "subscriptions": [
+                  "/subscriptions/00000000-0000-0000-0000-000000000001"
+                ]
+              },
+              {
+                "tenantId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx2",
+                "managementGroups": [
+                  "Microsoft.Management/managementGroups/testMg4",
+                  "Microsoft.Management/managementGroups/testMg5"
+                ],
+                "subscriptions": [
+                  "/subscriptions/00000000-0000-0000-0000-000000000002"
+                ]
+              }
             ]
           },
           "networkManagerScopeAccesses": [
@@ -79,6 +123,28 @@
             ],
             "subscriptions": [
               "/subscriptions/00000000-0000-0000-0000-000000000000"
+            ],
+            "crossTenantScopes": [
+              {
+                "tenantId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx1",
+                "managementGroups": [
+                  "Microsoft.Management/managementGroups/testMg2",
+                  "Microsoft.Management/managementGroups/testMg3"
+                ],
+                "subscriptions": [
+                  "/subscriptions/00000000-0000-0000-0000-000000000001"
+                ]
+              },
+              {
+                "tenantId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx2",
+                "managementGroups": [
+                  "Microsoft.Management/managementGroups/testMg4",
+                  "Microsoft.Management/managementGroups/testMg5"
+                ],
+                "subscriptions": [
+                  "/subscriptions/00000000-0000-0000-0000-000000000002"
+                ]
+              }
             ]
           },
           "networkManagerScopeAccesses": [

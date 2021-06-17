@@ -298,6 +298,11 @@
             "modelAsString": true
           },
           "description": "Flag if need to remove current existing peerings."
+        },
+        "resourceGuid": {
+          "readOnly": true,
+          "type": "string",
+          "description": "The resourceGuid property of the Connectivity Configuration resource."
         }
       },
       "required": [

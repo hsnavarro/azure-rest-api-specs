@@ -27,6 +27,22 @@
             "managementGroups": [],
             "subscriptions": [
               "/subscriptions/00000000-0000-0000-0000-000000000000"
+            ],
+            "crossTenantScopes": [
+              {
+                "tenantId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx1",
+                "managementGroups": [],
+                "subscriptions": [
+                  "/subscriptions/00000000-0000-0000-0000-000000000001"
+                ]
+              },
+              {
+                "tenantId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx2",
+                "managementGroups": [],
+                "subscriptions": [
+                  "/subscriptions/00000000-0000-0000-0000-000000000002"
+                ]
+              }
             ]
           },
           "networkManagerScopeAccesses": [

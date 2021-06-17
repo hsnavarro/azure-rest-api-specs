@@ -349,6 +349,11 @@
           "readOnly": true,
           "$ref": "./network.json#/definitions/ProvisioningState",
           "description": "The provisioning state of the scope assignment resource."
+        },
+        "resourceGuid": {
+          "readOnly": true,
+          "type": "string",
+          "description": "The resourceGuid property of the Network Group resource."
         }
       },
       "description": "Properties of network group"

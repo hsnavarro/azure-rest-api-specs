@@ -234,6 +234,11 @@
             "$ref": "#/definitions/UserBaseRule"
           },
           "description": "Base user rule List"
+        },
+        "resourceGuid": {
+          "readOnly": true,
+          "type": "string",
+          "description": "The resourceGuid property of the Security User Rule Collection resource."
         }
       },
       "allOf": [
@@ -251,6 +256,11 @@
             "$ref": "#/definitions/AdminBaseRule"
           },
           "description": "Base admin rule List"
+        },
+        "resourceGuid": {
+          "readOnly": true,
+          "type": "string",
+          "description": "The resourceGuid property of the Security Admin Rule Collection resource."
         }
       },
       "allOf": [
