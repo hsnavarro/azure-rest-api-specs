@@ -572,11 +572,6 @@
           "readOnly": true,
           "description": "The system metadata related to this resource.",
           "$ref": "./network.json#/definitions/SystemData"
-        },
-        "resourceGuid": {
-          "readOnly": true,
-          "type": "string",
-          "description": "The resourceGuid property of the User Rule resource."
         }
       },
       "allOf": [
@@ -676,6 +671,11 @@
           "readOnly": true,
           "$ref": "./network.json#/definitions/ProvisioningState",
           "description": "The provisioning state of the security configuration user rule resource."
+        },
+        "resourceGuid": {
+          "readOnly": true,
+          "type": "string",
+          "description": "The resourceGuid property of the User Rule resource."
         }
       },
       "required": [
@@ -766,6 +766,11 @@
           "readOnly": true,
           "$ref": "./network.json#/definitions/ProvisioningState",
           "description": "The provisioning state of the security configuration user rule resource."
+        },
+        "resourceGuid": {
+          "readOnly": true,
+          "type": "string",
+          "description": "The resourceGuid property of the Default User Rule resource."
         }
       },
       "description": "Security default user rule resource."

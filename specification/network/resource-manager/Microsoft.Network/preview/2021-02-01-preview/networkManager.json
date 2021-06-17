@@ -479,11 +479,6 @@
           "readOnly": true,
           "description": "The system metadata related to this resource.",
           "$ref": "./network.json#/definitions/SystemData"
-        },
-        "resourceGuid": {
-          "readOnly": true,
-          "type": "string",
-          "description": "The resourceGuid property of the Network Manager resource."
         }
       },
       "allOf": [
@@ -558,6 +553,11 @@
           "readOnly": true,
           "$ref": "./network.json#/definitions/ProvisioningState",
           "description": "The provisioning state of the scope assignment resource."
+        },
+        "resourceGuid": {
+          "readOnly": true,
+          "type": "string",
+          "description": "The resourceGuid property of the Network Manager resource."
         }
       },
       "description": "Properties of Managed Network"
@@ -587,11 +587,6 @@
           "type": "string",
           "$ref": "#/definitions/ConfigurationType",
           "description": "Commit Type."
-        },
-        "resourceGuid": {
-          "readOnly": true,
-          "type": "string",
-          "description": "The resourceGuid property of the Network Manager Commit resource."
         }
       },
       "description": "Network Manager Commit."

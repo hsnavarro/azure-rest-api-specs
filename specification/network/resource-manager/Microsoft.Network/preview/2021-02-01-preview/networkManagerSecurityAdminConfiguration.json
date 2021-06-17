@@ -565,11 +565,6 @@
           "readOnly": true,
           "description": "The system metadata related to this resource.",
           "$ref": "./network.json#/definitions/SystemData"
-        },
-        "resourceGuid": {
-          "readOnly": true,
-          "type": "string",
-          "description": "The resourceGuid property of the Security Configuration resource."
         }
       },
       "allOf": [
@@ -617,6 +612,11 @@
           "readOnly": true,
           "$ref": "./network.json#/definitions/ProvisioningState",
           "description": "The provisioning state of the resource."
+        },
+        "resourceGuid": {
+          "readOnly": true,
+          "type": "string",
+          "description": "The resourceGuid property of the Security Configuration resource."
         }
       },
       "description": "Defines the security Configuration properties."
@@ -680,11 +680,6 @@
           "readOnly": true,
           "description": "The system metadata related to this resource.",
           "$ref": "./network.json#/definitions/SystemData"
-        },
-        "resourceGuid": {
-          "readOnly": true,
-          "type": "string",
-          "description": "The resourceGuid property of the Rule Collection resource."
         }
       },
       "allOf": [
@@ -715,6 +710,11 @@
           "readOnly": true,
           "$ref": "./network.json#/definitions/ProvisioningState",
           "description": "The provisioning state of the resource."
+        },
+        "resourceGuid": {
+          "readOnly": true,
+          "type": "string",
+          "description": "The resourceGuid property of the Rule Collection resource."
         }
       },
       "description": "Defines the rule collection properties."
@@ -737,11 +737,6 @@
           "readOnly": true,
           "description": "The system metadata related to this resource.",
           "$ref": "./network.json#/definitions/SystemData"
-        },
-        "resourceGuid": {
-          "readOnly": true,
-          "type": "string",
-          "description": "The resourceGuid property of the Admin Rule resource."
         }
       },
       "allOf": [
@@ -835,6 +830,11 @@
           "readOnly": true,
           "$ref": "./network.json#/definitions/ProvisioningState",
           "description": "The provisioning state of the resource."
+        },
+        "resourceGuid": {
+          "readOnly": true,
+          "type": "string",
+          "description": "The resourceGuid property of the Admin Rule resource."
         }
       },
       "required": [
@@ -937,6 +937,11 @@
           "readOnly": true,
           "$ref": "./network.json#/definitions/ProvisioningState",
           "description": "The provisioning state of the resource."
+        },
+        "resourceGuid": {
+          "readOnly": true,
+          "type": "string",
+          "description": "The resourceGuid property of the Default Admin Rule resource."
         }
       },
       "description": "Security default admin rule resource."

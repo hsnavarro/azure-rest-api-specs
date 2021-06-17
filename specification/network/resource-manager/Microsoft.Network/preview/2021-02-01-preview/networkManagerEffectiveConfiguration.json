@@ -200,11 +200,6 @@
           "x-ms-client-flatten": true,
           "$ref": "#/definitions/SecurityUserRuleCollectionProperties",
           "description": "The security user rule collection properties"
-        },
-        "resourceGuid": {
-          "readOnly": true,
-          "type": "string",
-          "description": "The resourceGuid property of the Security User Rule Collection resource."
         }
       },
       "allOf": [
@@ -221,11 +216,6 @@
           "x-ms-client-flatten": true,
           "$ref": "#/definitions/SecurityAdminRuleCollectionProperties",
           "description": "The security admin rule collection properties"
-        },
-        "resourceGuid": {
-          "readOnly": true,
-          "type": "string",
-          "description": "The resourceGuid property of the Security Admin Rule Collection resource."
         }
       },
       "allOf": [
@@ -244,6 +234,11 @@
             "$ref": "#/definitions/UserBaseRule"
           },
           "description": "Base user rule List"
+        },
+        "resourceGuid": {
+          "readOnly": true,
+          "type": "string",
+          "description": "The resourceGuid property of the Security User Rule Collection resource."
         }
       },
       "allOf": [
@@ -261,6 +256,11 @@
             "$ref": "#/definitions/AdminBaseRule"
           },
           "description": "Base admin rule List"
+        },
+        "resourceGuid": {
+          "readOnly": true,
+          "type": "string",
+          "description": "The resourceGuid property of the Security Admin Rule Collection resource."
         }
       },
       "allOf": [
@@ -320,11 +320,6 @@
             "name": "EffectiveAdminRuleKind",
             "modelAsString": true
           }
-        },
-        "resourceGuid": {
-          "readOnly": true,
-          "type": "string",
-          "description": "The resourceGuid property of the Admin Rule resource."
         }
       },
       "required": [
@@ -382,11 +377,6 @@
             "name": "EffectiveUserRuleKind",
             "modelAsString": true
           }
-        },
-        "resourceGuid": {
-          "readOnly": true,
-          "type": "string",
-          "description": "The resourceGuid property of the User Rule resource."
         }
       },
       "required": [
