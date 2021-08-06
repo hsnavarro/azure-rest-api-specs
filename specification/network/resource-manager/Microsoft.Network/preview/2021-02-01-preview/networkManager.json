@@ -437,6 +437,421 @@
           }
         }
       }
+    },
+    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkManagers/{networkManagerName}/networkManagerInvitations/{invitationName}": {
+      "parameters": [
+        {
+          "$ref": "./network.json#/parameters/SubscriptionIdParameter"
+        },
+        {
+          "$ref": "#/parameters/ResourceGroupNameParameter"
+        },
+        {
+          "$ref": "#/parameters/NetworkManagerNameParameter"
+        },
+        {
+          "$ref": "#/parameters/InvitationNameParameter"
+        },
+        {
+          "$ref": "./network.json#/parameters/ApiVersionParameter"
+        }
+      ],
+      "put": {
+        "tags":[
+          "NetworkManagers"
+        ],
+        "operationId": "CrossTenantScopes_CreateNetworkManagerInvitation",
+        "description": "Create an invitation on the network manager side",
+        "parameters": [
+          {
+            "name": "parameters",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/CrossTenantScopeRecordList"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Updated - Returns information about the invitation.",
+            "schema": {
+              "$ref": "#/definitions/InvitationScopeInformation"
+            }
+          },
+          "201": {
+            "description": "Created - Returns information about the invitation.",
+            "schema": {
+              "$ref": "#/definitions/InvitationScopeInformation"
+            }
+          },
+          "default": {
+            "description": "Error response describing why the operation failed.",
+            "schema": {
+              "$ref": "./network.json#/definitions/CloudError"
+            }
+          }
+        },
+        "x-ms-examples": {
+          "Create invitation on network manager side": {
+            "$ref": "./examples/NetworkManagerCreateNetworkManagerInvitation.json"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "NetworkManagers"
+        ],
+        "operationId": "CrossTenantScopes_GetNetworkManagerInvitation",
+        "description": "Get invitation created by this network manager with the given name.",
+        "responses": {
+          "200": {
+            "description": "OK - Returns the invitation",
+            "schema": {
+              "$ref": "#/definitions/InvitationScopeInformation"
+            }
+          },
+          "default": {
+            "description": "Error response describing why the operation failed.",
+            "schema": {
+              "$ref": "./network.json#/definitions/CloudError"
+            }
+          }
+        },
+        "x-ms-examples": {
+          "Get invitation on network manager side": {
+            "$ref": "./examples/NetworkManagerGetNetworkManagerInvitation.json"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "NetworkManagers"
+        ],
+        "operationId": "CrossTenantScopes_DeleteNetworkManagerInvitation",
+        "description": "Delete the pending invite created by this network manager with the given name.",
+        "responses": {
+          "200": {
+            "description": "Delete Succeed."
+          },
+          "204": {
+            "description": "Request successful. The resource does not exist."
+          },
+          "default": {
+            "description": "Error response describing why the operation failed.",
+            "schema": {
+              "$ref": "./network.json#/definitions/CloudError"
+            }
+          }
+        },
+        "x-ms-examples": {
+          "Cancel pending invitation on network manager side": {
+            "$ref": "./examples/NetworkManagerCancelNetworkManagerInvitation.json"
+          }
+        }
+      }
+    },
+    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkManagers/{networkManagerName}/networkManagerInvitations": {
+      "get": {
+        "tags": [
+          "NetworkManagers"
+        ],
+        "operationId": "CrossTenantScopes_ListNetworkManagerInvitations",
+        "description": "List all invitations created by this network manager.",
+        "parameters": [
+          {
+            "$ref": "./network.json#/parameters/SubscriptionIdParameter"
+          },
+          {
+            "$ref": "#/parameters/ResourceGroupNameParameter"
+          },
+          {
+            "$ref": "#/parameters/NetworkManagerNameParameter"
+          },
+          {
+            "$ref": "./network.json#/parameters/ApiVersionParameter"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK - Returns a list of the invitations sent by this network manager.",
+            "schema": {
+              "$ref": "#/definitions/InvitationScopeInformationListResult"
+            }
+          },
+          "default": {
+            "description": "Error response describing why the operation failed.",
+            "schema": {
+              "$ref": "./network.json#/definitions/CloudError"
+            }
+          }
+        },
+        "x-ms-examples": {
+          "List network manager invitations": {
+            "$ref": "./examples/NetworkManagerListNetworkManagerInvitations.json"
+          }
+        }
+      }
+    },
+    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkManagers/{networkManagerName}/listScopeInvitations": {
+      "post": {
+        "tags": [
+          "NetworkManagers"
+        ],
+        "operationId": "CrossTenantScopes_ListScopeInvitationsFromNetworkManager",
+        "description": "List all invitations sent to this network manager.",
+        "parameters": [
+          {
+            "$ref": "./network.json#/parameters/SubscriptionIdParameter"
+          },
+          {
+            "$ref": "#/parameters/ResourceGroupNameParameter"
+          },
+          {
+            "$ref": "#/parameters/NetworkManagerNameParameter"
+          },
+          {
+            "$ref": "./network.json#/parameters/ApiVersionParameter"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK - Returns a list of the invitations sent to this network manager.",
+            "schema": {
+              "$ref": "#/definitions/InvitationScopeInformationListResult"
+            }
+          },
+          "default": {
+            "description": "Error response describing why the operation failed.",
+            "schema": {
+              "$ref": "./network.json#/definitions/CloudError"
+            }
+          }
+        },
+        "x-ms-examples": {
+          "List scope invitations": {
+            "$ref": "./examples/NetworkManagerListScopeInvitationsFromNetworkManager.json"
+          }
+        }
+      }
+    },
+    "{scope}/providers/Microsoft.Network/ScopeInvitations/{invitationName}": {
+      "parameters": [
+        {
+          "$ref": "#/parameters/ScopeParameter"
+        },
+        {
+          "$ref": "#/parameters/InvitationNameParameter"
+        },
+        {
+          "$ref": "./network.json#/parameters/ApiVersionParameter"
+        }
+      ],
+      "put": {
+        "tags": [
+          "NetworkManagers"
+        ],
+        "operationId": "CrossTenantScopes_ListScopeInvitations",
+        "description": "Create an invitation on the scope side.",
+        "parameters": [
+          {
+            "name": "parameters",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/CrossTenantNetworkManagerRecord"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Updated - Returns information about the invitation.",
+            "schema": {
+              "$ref": "#/definitions/InvitationNetworkManagerInformation"
+            }
+          },
+          "201": {
+            "description": "Created - Returns information about the invitation.",
+            "schema": {
+              "$ref": "#/definitions/InvitationNetworkManagerInformation"
+            }
+          },
+          "default": {
+            "description": "Error response describing why the operation failed.",
+            "schema": {
+              "$ref": "./network.json#/definitions/CloudError"
+            }
+          }
+        },
+        "x-ms-examples": {
+          "Create invitation on scope side": {
+            "$ref": "./examples/NetworkManagerCreateScopeInvitation.json"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "NetworkManagers"
+        ],
+        "operationId": "CrossTenantScopes_GetScopeInvitation",
+        "description": "Get invitation created by this scope with the given name.",
+        "responses": {
+          "200": {
+            "description": "OK - Returns the invitation",
+            "schema": {
+              "$ref": "#/definitions/InvitationNetworkManagerInformation"
+            }
+          },
+          "default": {
+            "description": "Error response describing why the operation failed.",
+            "schema": {
+              "$ref": "./network.json#/definitions/CloudError"
+            }
+          }
+        },
+        "x-ms-examples": {
+          "Get invitation on scope side": {
+            "$ref": "./examples/NetworkManagerGetScopeInvitation.json"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "NetworkManagers"
+        ],
+        "operationId": "CrossTenantScopes_DeleteScopeInvitation",
+        "description": "Delete the pending invite created by this scope with the given name.",
+        "responses": {
+          "200": {
+            "description": "Delete Succeed."
+          },
+          "204": {
+            "description": "Request successful. The resource does not exist."
+          },
+          "default": {
+            "description": "Error response describing why the operation failed.",
+            "schema": {
+              "$ref": "./network.json#/definitions/CloudError"
+            }
+          }
+        },
+        "x-ms-examples": {
+          "Cancel pending invitation on scope side": {
+            "$ref": "./examples/NetworkManagerCancelScopeInvitation.json"
+          }
+        }
+      }
+    },
+    "{scope}/providers/Microsoft.Network/ScopeInvitations": {
+      "get": {
+        "tags": [
+          "NetworkManagers"
+        ],
+        "operationId": "CrossTenantScopes_ListScopeInvitations",
+        "description": "List all invitations created by this scope.",
+        "parameters": [
+          {
+            "$ref": "#/parameters/ScopeParameter"
+          },
+          {
+            "$ref": "./network.json#/parameters/ApiVersionParameter"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK - Returns a list of the invitations created by this scope.",
+            "schema": {
+              "$ref": "#/definitions/InvitationNetworkManagerInformationListResult"
+            }
+          },
+          "default": {
+            "description": "Error response describing why the operation failed.",
+            "schema": {
+              "$ref": "./network.json#/definitions/CloudError"
+            }
+          }
+        },
+        "x-ms-examples": {
+          "List scope invitations": {
+            "$ref": "./examples/NetworkManagerListScopeInvitations.json"
+          }
+        }
+      }
+    },
+    "{scope}/providers/Microsoft.Network/listNetworkManagerInvitations": {
+      "post": {
+        "tags": [
+          "NetworkManagers"
+        ],
+        "operationId": "CrossTenantScopes_ListNetworkManagerInvitationsFromScope",
+        "description": "List all invitations sent to this scope.",
+        "parameters": [
+          {
+            "$ref": "#/parameters/ScopeParameter"
+          },
+          {
+            "$ref": "./network.json#/parameters/ApiVersionParameter"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK - Returns a list of the invitations sent to this scope.",
+            "schema": {
+              "$ref": "#/definitions/InvitationNetworkManagerInformationListResult"
+            }
+          },
+          "default": {
+            "description": "Error response describing why the operation failed.",
+            "schema": {
+              "$ref": "./network.json#/definitions/CloudError"
+            }
+          }
+        },
+        "x-ms-examples": {
+          "List scope invitations": {
+            "$ref": "./examples/NetworkManagerListScopeInvitationsFromNetworkManager.json"
+          }
+        }
+      }
+    },
+    "{scope}/providers/Microsoft.Network/NetworkManagerInvites/{invitationName}/revoke": {
+      "post": {
+        "tags": [
+          "NetworkManagers"
+        ],
+        "operationId": "CrossTenantScopes_RevokeAcceptedInvitation",
+        "description": "Revoked an accepted invitation, removing the scope from the network manager.",
+        "parameters": [
+          {
+            "$ref": "#/parameters/ScopeParameter"
+          },
+          {
+            "$ref": "#/parameters/InvitationNameParameter"
+          },
+          {
+            "$ref": "./network.json#/parameters/ApiVersionParameter"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK - Returns the invitation revoked.",
+            "schema": {
+              "$ref": "#/definitions/InvitationNetworkManagerInformation"
+            }
+          },
+          "default": {
+            "description": "Error response describing why the operation failed.",
+            "schema": {
+              "$ref": "./network.json#/definitions/CloudError"
+            }
+          }
+        },
+        "x-ms-examples": {
+          "Revoked accepted invitation": {
+            "$ref": "./examples/NetworkManagerRevokeAcceptedInvitation.json"
+          }
+        }
+      }
     }
   },
   "definitions": {
@@ -526,6 +941,29 @@
         }
       },
       "description": "Properties of Managed Network"
+    },
+    "CrossTenantScopes": {
+      "properties": {
+        "tenantId": {
+          "type": "string",
+          "description": "Tenant ID."
+        },
+        "managementGroups": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "List of management groups."
+        },
+        "subscriptions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "List of subscriptions."
+        }
+      },
+      "description": "Cross tenant scopes."
     },
     "NetworkManagerCommit": {
       "properties": {
@@ -663,6 +1101,124 @@
         }
       },
       "description": "Effective Virtual Networks Parameter."
+    },
+    "CrossTenantScopeRecord": {
+      "properties": {
+        "tenantId": {
+          "type": "string",
+          "description": "Tenant id."
+        },
+        "scope": {
+          "type": "string",
+          "description": "Scope, that's inside this given tenant."
+        }
+      },
+      "description": "Record for the scope sent in the invitation for the network manager side."
+    },
+    "CrossTenantScopeRecordList": {
+      "properties": {
+        "scopes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CrossTenantScopeRecord"
+          },
+          "description": "List of scopes sent in the invitation for the network manager side."
+        }
+      },
+      "description": "Body of the network manager invitation request."
+    },
+    "CrossTenantScopeInvitationStatus": {
+      "properties": {
+        "tenantId": {
+          "type": "string",
+          "description": "Tenant id."
+        },
+        "scope": {
+          "type": "string",
+          "description": "Scope, that's inside this given tenant."
+        },
+        "provisioningState": {
+          "readOnly": true,
+          "$ref": "./network.json#/definitions/ProvisioningState",
+          "description": "The provisioning state of the scope assignment resource."
+        }
+      },
+      "description": "Invitation status for the given scope."
+    },
+    "InvitationScopeInformation": {
+      "properties": {
+        "scopes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CrossTenantScopeInvitationStatus"
+          },
+          "description": "Page for the status information of all scopes related to an invite."
+        },
+        "$skipToken": {
+          "description": "When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.",
+          "type": "string"
+        }
+      },
+      "description": "Record for the status information of all scopes related to an invite."
+    },
+    "InvitationScopeInformationListResult": {
+      "properties": {
+        "value": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/InvitationScopeInformation"
+          },
+          "description": "Page for all the scope information of invitations related to a network manager."
+        },
+        "$skipToken": {
+          "description": "When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.",
+          "type": "string"
+        }
+      },
+      "description": "List of scope information of invitations related to a network manager."
+    },
+    "CrossTenantNetworkManagerRecord": {
+      "properties": {
+        "networkManagerId": {
+          "type": "string",
+          "description": "Network Manager Id."
+        }
+      },
+      "description": "Body of the scope invitation request."
+    },
+    "InvitationNetworkManagerInformation": {
+      "properties": {
+        "tenantId": {
+          "type": "string",
+          "description": "Tenant id."
+        },
+        "networkManagerId": {
+          "type": "string",
+          "description": "Network Manager Id."
+        },
+        "provisioningState": {
+          "readOnly": true,
+          "$ref": "./network.json#/definitions/ProvisioningState",
+          "description": "The provisioning state of the scope assignment resource."
+        }
+      },
+      "description": "Record for the status information of the network manager related to an invite."
+    },
+    "InvitationNetworkManagerInformationListResult": {
+      "properties": {
+        "value": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/InvitationNetworkManagerInformation"
+          },
+          "description": "Page for all the network manager information of invitations related to a scope."
+        },
+        "$skipToken": {
+          "description": "When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.",
+          "type": "string"
+        }
+      },
+      "description": "List of network manager information of invitations related to a scope."
     }
   },
   "parameters": {
@@ -699,6 +1255,22 @@
       "in": "query",
       "required": false,
       "type": "string",
+      "x-ms-parameter-location": "method"
+    },
+    "ScopeParameter": {
+      "name": "scope",
+      "in": "path",
+      "required": true,
+      "type": "string",
+      "description": "Scope id, either for a subscription or management group.",
+      "x-ms-parameter-location": "method"
+    },
+    "InvitationNameParameter": {
+      "name": "invitationName",
+      "in": "path",
+      "required": true,
+      "type": "string",
+      "description": "Name for the invitation created.",
       "x-ms-parameter-location": "method"
     }
   }
